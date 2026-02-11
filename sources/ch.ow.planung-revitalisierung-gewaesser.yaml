@@ -1,0 +1,288 @@
+parts:
+    coverages:
+        bboxnw: &bboxnw
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxow: &bboxow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxnwow: &bboxnwow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxlu: &bboxlu
+            bbox: [2630127, 1180568, 2681764, 1237690]
+            srs: 'EPSG:2056'
+        bboxels: &bboxels
+            bbox: [2620000, 1146000, 2724800, 1242000]
+            srs: 'EPSG:2056'
+        bboxclip: &bboxclip
+            bbox: [2660000, 1172000, 2680000, 1200000]
+            #datasource: Point(2660000, 1172000).buffer(2000)
+            srs: 'EPSG:2056'
+
+layers:
+  - name: ch.ow.planung-revitalisierung-fliessgewaesser
+    title: Planung der Revitalisierung von Fliessgewässern (CH191)
+    layers:
+      - name: ch.ow.planung-revitalisierung-fliessgewaesser-revitalisierungsplan
+        title: Revitalisierungsplanung 2014
+        layers:
+          - name: ch.ow.planung-revitalisierung-fliessgewaesser-revitalisierungsplan-prioritaet
+            title: Priorität
+            legendurl: https://www.gis-daten.ch/docs/ow/wms/planung-revitalisierung-fliessgewaesser-revitalisierungsplan-prioritaet.png 
+            sources:
+              - ch.ow.planung-revitalisierung-fliessgewaesser-revitalisierungsplan-prioritaet
+          - name: ch.ow.planung-revitalisierung-fliessgewaesser-revitalisierungsplan-nutzen
+            title: Nutzen für Natur und Landschaft
+            legendurl: https://www.gis-daten.ch/docs/ow/wms/planung-revitalisierung-fliessgewaesser-revitalisierungsplan-nutzen.png 
+            sources:
+              - ch.ow.planung-revitalisierung-fliessgewaesser-revitalisierungsplan-nutzen
+          - name: ch.ow.planung-revitalisierung-fliessgewaesser-revitalisierungsplan-oeko-potenzial
+            title: Ökologisches Potenzial und landschaftliche Bedeutung
+            legendurl: https://www.gis-daten.ch/docs/ow/wms/planung-revitalisierung-fliessgewaesser-revitalisierungsplan-oeko-potenzial.png 
+            sources:
+              - ch.ow.planung-revitalisierung-fliessgewaesser-revitalisierungsplan-oeko-potenzial
+      - name: ch.ow.planung-revitalisierung-fliessgewaesser-oekomorphologie
+        title: Ökomorphologie Stand 2012
+        layers:
+          - name: ch.ow.planung-revitalisierung-fliessgewaesser-oekomorphologie-abstuerze
+            title: Abstürze
+            legendurl: https://www.gis-daten.ch/docs/ow/wms/planung-revitalisierung-fliessgewaesser-oekomorphologie-abstuerze.png 
+            sources:
+              - ch.ow.planung-revitalisierung-fliessgewaesser-oekomorphologie-abstuerze
+          - name: ch.ow.planung-revitalisierung-fliessgewaesser-oekomorphologie-bauwerke
+            title: Bauwerke
+            legendurl: https://www.gis-daten.ch/docs/ow/wms/planung-revitalisierung-fliessgewaesser-oekomorphologie-bauwerke.png 
+            sources:
+              - ch.ow.planung-revitalisierung-fliessgewaesser-oekomorphologie-bauwerke
+          - name: ch.ow.planung-revitalisierung-fliessgewaesser-oekomorphologie-klassierung
+            title: Klassierung
+            legendurl: https://www.gis-daten.ch/docs/ow/wms/planung-revitalisierung-fliessgewaesser-oekomorphologie-klassierung.png 
+            sources:
+              - ch.ow.planung-revitalisierung-fliessgewaesser-oekomorphologie-klassierung
+      - name: ch.ow.planung-revitalisierung-fliessgewaesser-gewaessernetz-2012
+        title: Gewässernetz Stand 2012
+        legendurl: https://www.gis-daten.ch/docs/ow/wms/planung-revitalisierung-fliessgewaesser-gewaessernetz-2012.png 
+        sources:
+          - ch.ow.planung-revitalisierung-fliessgewaesser-gewaessernetz-2012
+  - name: ch.ow.planung-revitalisierung-seeufer
+    title: Planung der Revitalisierung von Seeufern (CH191)
+    layers:
+      - name: ch.ow.planung-revitalisierung-seeufer-revitalisierungsplan
+        title: Revitalisierungsplanung Seeufer
+        layers:
+          - name: ch.ow.planung-revitalisierung-seeufer-revitalisierungsplan-planung2022
+            title: Planung 2022
+            legendurl: https://www.gis-daten.ch/docs/ow/wms/planung-revitalisierung-seeufer-revitalisierungsplan-planung2022.png 
+            sources:
+              - ch.ow.planung-revitalisierung-seeufer-revitalisierungsplan-planung2022
+          - name: ch.ow.planung-revitalisierung-seeufer-revitalisierungsplan-nutzen
+            title: Nutzen für Natur und Landschaft
+            legendurl: https://www.gis-daten.ch/docs/ow/wms/planung-revitalisierung-seeufer-revitalisierungsplan-nutzen.png 
+            sources:
+              - ch.ow.planung-revitalisierung-seeufer-revitalisierungsplan-nutzen
+          - name: ch.ow.planung-revitalisierung-seeufer-revitalisierungsplan-bedeutung
+            title: Ökologische und landschaftliche Bedeutung
+            legendurl: https://www.gis-daten.ch/docs/ow/wms/planung-revitalisierung-seeufer-revitalisierungsplan-bedeutung.png 
+            sources:
+              - ch.ow.planung-revitalisierung-seeufer-revitalisierungsplan-bedeutung
+      - name: ch.ow.planung-revitalisierung-seeufer-oekomorphologie
+        title: Ökomorphologie
+        legendurl: https://www.gis-daten.ch/docs/ow/wms/planung-revitalisierung-seeufer-oekomorphologie.png 
+        sources:
+          - ch.ow.planung-revitalisierung-seeufer-oekomorphologie
+
+sources:
+  # FLIESSGEWÄSSER
+  # Revitalisierungsplanung 2014
+  ch.ow.planung-revitalisierung-fliessgewaesser-revitalisierungsplan-prioritaet:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:14'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_fliessgewaesser/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow 
+
+  ch.ow.planung-revitalisierung-fliessgewaesser-revitalisierungsplan-nutzen:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:15'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_fliessgewaesser/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow 
+
+  ch.ow.planung-revitalisierung-fliessgewaesser-revitalisierungsplan-oeko-potenzial:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:16'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_fliessgewaesser/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow 
+
+  # Ökomorphologie Stand 2012
+  ch.ow.planung-revitalisierung-fliessgewaesser-oekomorphologie-abstuerze:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:18'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_fliessgewaesser/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow
+
+  ch.ow.planung-revitalisierung-fliessgewaesser-oekomorphologie-bauwerke:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:19'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_fliessgewaesser/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow
+
+  ch.ow.planung-revitalisierung-fliessgewaesser-oekomorphologie-klassierung:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:20'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_fliessgewaesser/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow
+
+  # Gewässernetz Stand 2012
+  ch.ow.planung-revitalisierung-fliessgewaesser-gewaessernetz-2012:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:21'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_fliessgewaesser/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow
+
+  # SEEUFER
+  # Revitalisierungsplanung
+  ch.ow.planung-revitalisierung-seeufer-revitalisierungsplan-planung2022:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:1'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_seen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow
+
+  ch.ow.planung-revitalisierung-seeufer-revitalisierungsplan-nutzen:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:2'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_seen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow
+
+  ch.ow.planung-revitalisierung-seeufer-revitalisierungsplan-bedeutung:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:3'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_seen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow
+
+  # Ökomorphologie
+  ch.ow.planung-revitalisierung-seeufer-oekomorphologie:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:4'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_seen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow  

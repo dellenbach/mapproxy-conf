@@ -1,0 +1,50 @@
+globals:
+  srs:
+    axis_order_en: ['EPSG:21781', 'EPSG:2056']
+    # override system projection file
+    #proj_data_dir: '/path to dir that contains epsg file'
+
+  # cache options
+  cache:
+    # where to store the cached images
+    base_dir: './cache_data'
+    # where to store lockfiles for concurrent_requests
+    lock_dir: './cache_data/locks'
+    # where to store lockfiles for tile creation
+    tile_lock_dir: './cache_data/tile_locks'
+
+    # request x*y tiles in one step
+    meta_size: [4, 4]
+    # add a buffer on all sides (in pixel) when requesting
+    # new images
+    meta_buffer: 80
+
+
+  # image/transformation options
+  image:
+    # use best resampling for vector data
+    resampling_method: bicubic # nearest/bilinear
+    # stretch cached images by this factor before
+    # using the next level
+    stretch_factor: 1.15
+    # shrink cached images up to this factor before
+    # returning an empty image (for the first level)
+    max_shrink_factor: 4.0
+
+    # Enable 24bit PNG images. Defaults to true (8bit PNG)
+    paletted: false
+    formats:
+      custom_format:
+        format: image/png
+        # the custom format will be stored as 8bit PNG
+        mode: P
+        colors: 32
+        transparent: true
+        encoding_options:
+        # The algorithm used to quantize (reduce) the image colors
+          quantizer: fastoctree
+      # edit an existing format
+      image/jpeg:
+        encoding_options:
+          # jpeg quality [0-100]
+          jpeg_quality: 60

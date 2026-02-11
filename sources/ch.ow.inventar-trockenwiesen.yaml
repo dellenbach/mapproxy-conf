@@ -1,0 +1,46 @@
+parts:
+    coverages:
+        bboxnw: &bboxnw
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxow: &bboxow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxnwow: &bboxnwow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxlu: &bboxlu
+            bbox: [2630127, 1180568, 2681764, 1237690]
+            srs: 'EPSG:2056'
+        bboxels: &bboxels
+            bbox: [2620000, 1146000, 2724800, 1242000]
+            srs: 'EPSG:2056'
+        bboxclip: &bboxclip
+            bbox: [2660000, 1172000, 2680000, 1200000]
+            #datasource: Point(2660000, 1172000).buffer(2000)
+            srs: 'EPSG:2056'
+
+layers:
+  - name: ch.ow.inventar-trockenwiesen
+    title: Kantonales Inventar der Trockenwiesen und -weiden von nationaler, regionaler und lokaler Bedeutung (CH189)
+    legendurl: https://www.gis-daten.ch/docs/ow/wms/inventar-trockenwiesen.png 
+    sources:
+      - ch.ow.inventar-trockenwiesen
+
+sources:
+  ch.ow.inventar-trockenwiesen:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:11'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_natur_landschaftsschutz/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow 

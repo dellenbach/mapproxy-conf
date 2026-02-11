@@ -1,0 +1,46 @@
+services:
+  wms:
+    # only offer WMS 1.1.1
+    versions: [ '1.3.0', '1.1.1' ]
+
+    # supported SRS for this WMS
+    srs: [ 'EPSG:2056', 'EPSG:3857', 'EPSG:4326' ]
+
+    # force the layer extents (BBOX) to be displayed in this SRS
+    bbox_srs: [ 'EPSG:2056' ]
+
+    # limit the supported image formats.
+    image_formats: [ 'image/jpeg', 'image/png', 'image/gif', 'image/GeoTIFF', 'image/tiff' ]
+
+    # add attribution text in the lower-right corner.
+    attribution:
+      text: ''
+    #  text: 'Rasterdaten (c) swisstopo, AV-Daten (c) GIS Daten AG'
+
+    # return an OGC service exception when one or more sources return errors
+    # or no response at all (e.g. timeout)
+    on_source_errors: raise
+
+    # some WMS clients do not send all required parameters in feature info
+    # requests, MapProxy ignores these errors unless you set strict to true.
+    strict: false
+
+    # list of feature info types the server should offer
+    featureinfo_types: [ 'text', 'xml', 'json' ]
+
+    md:
+      # metadata used in capabilities documents
+      title: WMS GIS Daten AG (Nidwalden)
+      abstract: WMS Dienste fuer GIS Daten AG
+      online_resource: https://www.gis-daten.ch
+      contact:
+        organization: GIS Daten AG
+        address: Aemaettlistrasse 2
+        city: Stans
+        postcode: 6370
+        country: Switzerland
+        phone: +41 (0)41 618 61 12
+        email: support@gis-daten.ch
+      # multiline strings are possible with the right indention
+      access_constraints: Dieser WMS darf nur fuer die GIS Daten AG verwendet werden.
+  

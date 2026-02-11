@@ -1,0 +1,211 @@
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\wasser_nw.yaml (1 hit)
+	Line 107:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach_sec/nw_wasser/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\els_nwow_basislayer_av_farbig.yaml (5 hits)
+	Line 101:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/basislayer_landeskarten/MapServer
+	Line 119:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/nw_basisplan_gis_farbig/MapServer
+	Line 135:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/nw_basisplan_gis_dynamisch/MapServer
+	Line 151:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/ow_basisplan_gis_farbig/MapServer
+	Line 167:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/ow_basisplan_gis_dynamisch/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\els_nwow_basislayer_orthofoto.yaml (1 hit)
+	Line  97:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/basislayer_orthophoto/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\els_nwow_smr_25000.yaml (1 hit)
+	Line  97:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_25_relief/ImageServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\els_nwow_smr_50000.yaml (1 hit)
+	Line  97:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_50_relief/ImageServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\els_nwow_smr_100000.yaml (1 hit)
+	Line  97:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_100_relief/ImageServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\els_nwow_smr_200000.yaml (1 hit)
+	Line  97:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_200_relief/ImageServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\ewn.yaml (2 hits)
+	Line  95:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_nw/MapServer
+	Line 119:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/ewn/EWN_NIS/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\forst_nw_temp.yaml (3 hits)
+	Line 102:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/basislayer_orthophoto/MapServer
+	Line 118:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_nw/MapServer
+	Line 134:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_dynamisch_nw/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\infra3d.yaml (9 hits)
+	Line 120:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/nw_basisplan_gis_farbig/MapServer
+	Line 138:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/nw_basisplan_gis_dynamisch/MapServer
+	Line 156:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/ow_basisplan_gis_farbig/MapServer
+	Line 174:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/ow_basisplan_gis_dynamisch/MapServer
+	Line 194:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach_sec/ow_lkat/MapServer
+	Line 212:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_10_relief_farbig/ImageServer
+	Line 230:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_25_relief/ImageServer
+	Line 248:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_100_relief/ImageServer
+	Line 266:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_50_relief/ImageServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\logo-nw.yaml (10 hits)
+	Line 116:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/basislayer_orthophoto/MapServer
+	Line 134:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/nw_basisplan_gis_farbig/MapServer
+	Line 152:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/nw_basisplan_gis_dynamisch/MapServer
+	Line 170:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/ow_basisplan_gis_farbig/MapServer
+	Line 188:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/ow_basisplan_gis_dynamisch/MapServer
+	Line 207:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach_sec/nw_lkat/MapServer
+	Line 225:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_10_relief_farbig/ImageServer
+	Line 243:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_25_relief/ImageServer
+	Line 261:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_100_relief/ImageServer
+	Line 279:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_50_relief/ImageServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_Naturschutz-Vertragsflaechen.yaml (1 hit)
+	Line  99:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_landwirtschaft/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_nw_Bauzonen.yaml (1 hit)
+	Line  99:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_landwirtschaft/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_nw_Gewaesserraum.yaml (1 hit)
+	Line  99:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_landwirtschaft/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_nw_Schleppschlauch.yaml (1 hit)
+	Line  99:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_landwirtschaft/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_nw_Vernetzung.yaml (1 hit)
+	Line  99:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_landwirtschaft/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_ow_Gebietsaufteilung.yaml (1 hit)
+	Line  99:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_landwirtschaft/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_ow_NHG_Vertragsflaechen.yaml (1 hit)
+	Line  99:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_landwirtschaft/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_ow_pot_BoFlaeche_Tal-Berggebiet.yaml (1 hit)
+	Line  99:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_landwirtschaft/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_ow_Schleppschlauchflaechen.yaml (1 hit)
+	Line  99:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_landwirtschaft/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\nwow_naturgefahren_gefahrenkarte_basis.yaml (13 hits)
+	Line 134:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte_basis/MapServer
+	Line 148:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte_basis/MapServer
+	Line 162:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte_basis/MapServer
+	Line 176:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte_basis/MapServer
+	Line 190:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte_basis/MapServer
+	Line 203:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte_basis/MapServer
+	Line 217:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_natgef_planungszoneHWschutz_gwr/MapServer
+	Line 231:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_natgef_planungszoneHWschutz_gwr/MapServer
+	Line 245:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_natgef_planungszoneHWschutz_gwr/MapServer
+	Line 259:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_natgef_planungszoneHWschutz_gwr/MapServer
+	Line 273:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_natgef_planungszoneHWschutz_gwr/MapServer
+	Line 287:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_natgef_planungszoneHWschutz_gwr/MapServer
+	Line 300:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_natgef_planungszoneHWschutz_gwr/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\open.yaml (5 hits)
+	Line 127:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_nw/MapServer
+	Line 143:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_ow/MapServer
+	Line 159:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/nw_basisplan_gis_transparent_nocache/MapServer
+	Line 175:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_oereb/nw_nutzungsplanung_oereb_DEF/MapServer
+	Line 191:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_oereb/ow_nutzungsplanung_oereb_DEF/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\ow_forst.yaml (4 hits)
+	Line 103:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/basislayer_orthophoto/MapServer
+	Line 119:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/basislayer_landeskarten/MapServer
+	Line 135:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/ow_basisplan_gis_farbig/MapServer
+	Line 151:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/ow_basisplan_gis_dynamisch/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\titlisbahnen.yaml (23 hits)
+	Line 162:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/basislayer_orthophoto/MapServer
+	Line 177:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_25_relief/ImageServer
+	Line 192:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_nw/MapServer
+	Line 207:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/nw_basisplan_gis_transparent_nocache/MapServer
+	Line 222:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_oereb/nw_nutzungsplanung_oereb_DEF/MapServer
+	Line 237:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte_basis/MapServer
+	Line 255:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach_sec/nw_lkat/MapServer
+	Line 270:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_natur_ls_natur_landschaftsschutz/MapServer
+	Line 285:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_grundwasserthemen/MapServer
+	Line 301:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_oereb/nw_kbs_oereb/MapServer
+	Line 316:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_oekomorphologie/MapServer
+	Line 331:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_wanderwege/MapServer
+	Line 346:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_wald/MapServer
+	Line 361:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_ow/MapServer
+	Line 376:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_oereb/ow_nutzungsplanung_oereb_DEF/MapServer
+	Line 392:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_natgef_planungszoneHWschutz_gwr/MapServer
+	Line 410:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach_sec/ow_lkat/MapServer
+	Line 425:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_natur_landschaftsschutz/MapServer
+	Line 440:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_gewaesserschutz/MapServer
+	Line 456:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_oereb/ow_kbs_oereb/MapServer
+	Line 474:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach_sec/ow_oekomorphologie/MapServer
+	Line 489:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_wanderwege/MapServer
+	Line 504:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_wald/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\trigonet.yaml (13 hits)
+	Line 336:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/basislayer_orthophoto/MapServer
+	Line 352:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_25_relief/ImageServer
+	Line 368:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_nw/MapServer
+	Line 384:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/nw_basisplan_gis_transparent_nocache/MapServer
+	Line 400:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_oereb/nw_nutzungsplanung_oereb_DEF/MapServer
+	Line 416:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_ow/MapServer
+	Line 432:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_oereb/ow_nutzungsplanung_oereb_DEF/MapServer
+	Line 448:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_natgef_planungszoneHWschutz_gwr/MapServer
+	Line 464:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_natur_landschaftsschutz/MapServer
+	Line 480:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_gewaesserschutz/MapServer
+	Line 496:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_kbs/MapServer
+	Line 512:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_wanderwege/MapServer
+	Line 528:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_wald/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\bfe_kann_ich_bohren.yaml (8 hits)
+	Line 198:           url: https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/nw_afu/nw_waermenutzung/MapServer
+	Line 223:           url: https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/nw_afu/nw_waermenutzung/MapServer
+	Line 248:           url: https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/nw_afu/nw_waermenutzung/MapServer
+	Line 273:           url: https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/nw_afu/nw_waermenutzung/MapServer
+	Line 298:           url: https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/nw_afu/nw_waermenutzung/MapServer
+	Line 324:           url: https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/nw_afu/nw_waermenutzung/MapServer
+	Line 349:           url: https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/nw_afu/nw_waermenutzung/MapServer
+	Line 370:           url: https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_waermenutzung/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\dataver.yaml (5 hits)
+	Line 108:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/basislayer_orthophoto/MapServer
+	Line 124:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_nw/MapServer
+	Line 140:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_ow/MapServer
+	Line 156:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_ow/MapServer
+	Line 175:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach_sec/ow_abwasser/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\dataver_tagmar.yaml (3 hits)
+	Line 122:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/tn_basis/luz_basisplan_gis_farbig/MapServer
+	Line 138:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/tn_basis/luz_basisplan_gis_dynamisch/MapServer
+	Line 154:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/tn_basis/lu_swissimage/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\els_nwow.yaml (13 hits)
+	Line 130:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/basislayer_orthophoto/MapServer
+	Line 146:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/basislayer_landeskarten/MapServer
+	Line 162:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_10_relief_farbig/ImageServer
+	Line 178:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_25_relief/ImageServer
+	Line 194:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_200_relief/ImageServer
+	Line 210:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_100_relief/ImageServer
+	Line 226:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/swiss_map_raster_50_relief/ImageServer
+	Line 242:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_nw/MapServer
+	Line 258:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/nw_basisplan_gis_farbig/MapServer
+	Line 274:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/nw_basisplan_gis_dynamisch/MapServer
+	Line 290:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_ow/MapServer
+	Line 306:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/ow_basisplan_gis_farbig/MapServer
+	Line 322:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/ow_basisplan_gis_dynamisch/MapServer
+  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\els_nwow_adresse.yaml (1 hit)
+	Line  97:         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/els_nwow/MapServer
+	
+	\\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_Naturschutz-Vertragsflaechen.yaml (1 hit)
+		Line  97:       layers: 'show:16'
+	  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_nw_Bauzonen.yaml (1 hit)
+		Line  97:       layers: 'show:12'
+	  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_nw_Gewaesserraum.yaml (1 hit)
+		Line  97:       layers: 'show:15'
+	  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_nw_Schleppschlauch.yaml (1 hit)
+		Line  97:       layers: 'show:19'
+	  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_nw_Vernetzung.yaml (1 hit)
+		Line  97:       layers: 'show:20'
+	  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_ow_Gebietsaufteilung.yaml (1 hit)
+		Line  97:       layers: 'show:26'
+	  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_ow_NHG_Vertragsflaechen.yaml (1 hit)
+		Line  97:       layers: 'show:25'
+	  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_ow_pot_BoFlaeche_Tal-Berggebiet.yaml (1 hit)
+		Line  97:       layers: 'show:27'
+	  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\lwn_ow_Schleppschlauchflaechen.yaml (1 hit)
+		Line  97:       layers: 'show:28'
+	  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\nwow_naturgefahren_gefahrenkarte_basis.yaml (11 hits)
+		Line 132:       layers: 'show:4'
+		Line 146:       layers: 'show:11'
+		Line 160:       layers: 'show:17'
+		Line 174:       layers: 'show:24'
+		Line 188:       layers: 'show:30'
+		Line 215:       layers: 'show:2'
+		Line 229:       layers: 'show:14'
+		Line 243:       layers: 'show:18'
+		Line 257:       layers: 'show:22'
+		Line 271:       layers: 'show:27'
+		Line 285:       layers: 'show:31'
+	  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\titlisbahnen.yaml (1 hit)
+		Line 390:       layers: 'show:6,7,8'
+	  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\trigonet.yaml (6 hits)
+		Line 191:       layers: 'show:7'
+		Line 207:       layers: 'show:25'
+		Line 223:       layers: 'show:84'
+		Line 239:       layers: 'show:30'
+		Line 255:       layers: 'show:40'
+		Line 271:       layers: 'show:18'
+	  \\gisdaten-wo-02.gisdaten.local\c$\mapproxy\configs\bfe_kann_ich_bohren.yaml (8 hits)
+		Line 197:       layers: show:7
+		Line 222:       layers: show:1
+		Line 247:       layers: show:2
+		Line 272:       layers: show:3
+		Line 297:       layers: show:4
+		Line 323:       layers: show:5
+		Line 348:       layers: show:6
+		Line 369:       layers: show:6

@@ -1,0 +1,16 @@
+layers:
+
+parts:
+    coverages:
+        bboxnw: &bboxnw
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxow: &bboxow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxnwow: &bboxnwow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxlu: &bboxlu
+            bbox: [2630127, 1180568, 2681764, 1237690]
+            srs: 'EPSG:2056'

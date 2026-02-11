@@ -1,0 +1,165 @@
+parts:
+    coverages:
+        bboxnw: &bboxnw
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxow: &bboxow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxnwow: &bboxnwow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxlu: &bboxlu
+            bbox: [2630127, 1180568, 2681764, 1237690]
+            srs: 'EPSG:2056'
+        bboxels: &bboxels
+            bbox: [2620000, 1146000, 2724800, 1242000]
+            srs: 'EPSG:2056'
+        bboxclip: &bboxclip
+            bbox: [2660000, 1172000, 2680000, 1200000]
+            #datasource: Point(2660000, 1172000).buffer(2000)
+            srs: 'EPSG:2056'
+
+layers:
+  - name: ch.ow.administrative-einteilung    
+    title: Administrative Einteilung (amtliche Vermessung) (CH063)
+    layers:
+      - name: ch.ow.administrative-einteilung-adressen   
+        title: Adressen / Strassen
+        legendurl: https://www.gis-daten.ch/docs/ow/wms/administrative-einteilung-adressen.png
+        sources:
+          - ch.ow.administrative-einteilung-adressen
+      - name: ch.ow.administrative-einteilung-plz   
+        title: PLZ Ortschaft
+        legendurl: https://www.gis-daten.ch/docs/ow/wms/administrative-einteilung-plz.png
+        sources:
+          - ch.ow.administrative-einteilung-plz
+      - name: ch.ow.administrative-einteilung-nomenklatur  
+        title: Nomenklatur / Flurnamen
+        legendurl: https://www.gis-daten.ch/docs/ow/wms/administrative-einteilung-nomenklatur.png
+        sources:
+          - ch.ow.administrative-einteilung-nomenklatur
+      - name: ch.ow.administrative-einteilung-plangeometrie 
+        title: Plangeometrie
+        legendurl: https://www.gis-daten.ch/docs/ow/wms/administrative-einteilung-plangeometrie.png
+        sources:
+          - ch.ow.administrative-einteilung-plangeometrie
+      - name: ch.ow.administrative-einteilung-spannungsarme-gebiete   
+        title: Spannungsarme Gebiete
+        legendurl: https://www.gis-daten.ch/docs/ow/wms/administrative-einteilung-spannungsarme-gebiete.png
+        sources:
+          - ch.ow.administrative-einteilung-spannungsarme-gebiete
+      - name: ch.ow.administrative-einteilung-toleranzstufen   
+        title: Toleranzstufen
+        legendurl: https://www.gis-daten.ch/docs/ow/wms/administrative-einteilung-toleranzstufen.png
+        sources:
+          - ch.ow.administrative-einteilung-toleranzstufen
+
+sources:
+# Adressen / Strassen
+  ch.ow.administrative-einteilung-adressen:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:1'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_dynamisch_ow/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow  
+
+# PLZ Ortschaften
+  ch.ow.administrative-einteilung-plz:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:4'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_dynamisch_ow/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow
+
+# Nomenklatur / Flurnamen
+  ch.ow.administrative-einteilung-nomenklatur:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:5'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_dynamisch_ow/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow
+
+# Plangeometrie
+  ch.ow.administrative-einteilung-plangeometrie:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:8'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_dynamisch_ow/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow
+
+# Spannungsarme Gebiete
+  ch.ow.administrative-einteilung-spannungsarme-gebiete:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:10'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_dynamisch_ow/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow
+
+# Toleranzstufen
+  ch.ow.administrative-einteilung-toleranzstufen:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:11'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/plan_fuer_grundbuch_bund_dynamisch_ow/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow

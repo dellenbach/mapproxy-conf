@@ -1,0 +1,100 @@
+parts:
+    coverages:
+        bboxnw: &bboxnw
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxow: &bboxow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxnwow: &bboxnwow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxlu: &bboxlu
+            bbox: [2630127, 1180568, 2681764, 1237690]
+            srs: 'EPSG:2056'
+        bboxels: &bboxels
+            bbox: [2620000, 1146000, 2724800, 1242000]
+            srs: 'EPSG:2056'
+        bboxclip: &bboxclip
+            bbox: [2660000, 1172000, 2680000, 1200000]
+            #datasource: Point(2660000, 1172000).buffer(2000)
+            srs: 'EPSG:2056'
+
+layers:
+  - name: ch.nw.bestehende-wasserentnahmen-inventar  
+    title: Bestehende Wasserentnahmen (Inventar) (CH140)
+    layers:
+      - name: ch.nw.bestehende-wasserentnahmen-inventar-entnahmen  
+        title: Entnahmen
+        layers:
+          - name: ch.nw.bestehende-wasserentnahmen-inventar-entnahmen-wasserkraftnutzung  
+            title: Wasserkraftnutzung
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/bestehende-wasserentnahmen-inventar-entnahmen-wasserkraftnutzung.png 
+            sources:
+              - ch.nw.bestehende-wasserentnahmen-inventar-entnahmen-wasserkraftnutzung 
+          - name: ch.nw.bestehende-wasserentnahmen-inventar-entnahmen-andere  
+            title: Andere Nutzungen
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/bestehende-wasserentnahmen-inventar-entnahmen-andere.png 
+            sources:
+              - ch.nw.bestehende-wasserentnahmen-inventar-entnahmen-andere
+      - name: ch.nw.bestehende-wasserentnahmen-inventar-rueckgaben  
+        title: Rückgaben
+        legendurl: https://www.gis-daten.ch/docs/nw/wms/bestehende-wasserentnahmen-inventar-rueckgaben.png 
+        sources:
+          - ch.nw.bestehende-wasserentnahmen-inventar-rueckgaben
+sources:
+
+  # ENTNAHMEN
+  # Wasserkraftnutzung
+  ch.nw.bestehende-wasserentnahmen-inventar-entnahmen-wasserkraftnutzung:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:1'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_inventar_wasserentnahmen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 
+
+  # Andere Nutzungen
+  ch.nw.bestehende-wasserentnahmen-inventar-entnahmen-andere:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:2'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_inventar_wasserentnahmen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 
+
+  # RÜCKGABEN
+  ch.nw.bestehende-wasserentnahmen-inventar-rueckgaben:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:3'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_inventar_wasserentnahmen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw  

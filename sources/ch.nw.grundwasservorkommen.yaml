@@ -1,0 +1,246 @@
+parts:
+    coverages:
+        bboxnw: &bboxnw
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxow: &bboxow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxnwow: &bboxnwow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxlu: &bboxlu
+            bbox: [2630127, 1180568, 2681764, 1237690]
+            srs: 'EPSG:2056'
+        bboxels: &bboxels
+            bbox: [2620000, 1146000, 2724800, 1242000]
+            srs: 'EPSG:2056'
+        bboxclip: &bboxclip
+            bbox: [2660000, 1172000, 2680000, 1200000]
+            #datasource: Point(2660000, 1172000).buffer(2000)
+            srs: 'EPSG:2056'
+
+layers:
+  - name: ch.nw.grundwasservorkommen
+    title: Grundwasservorkommen (CH139)
+    layers:
+      # QUELLHORIZONT
+      - name: ch.nw.grundwasservorkommen-quellhorizont
+        title: Quellhorizont
+        legendurl: https://www.gis-daten.ch/docs/nw/wms/grundwasservorkommen-quellhorizont.png 
+        sources:
+          - ch.nw.grundwasservorkommen-quellhorizont
+      # ISOHYPSEN
+      - name: ch.nw.grundwasservorkommen-isohypsen
+        title: Isohypsen
+        layers:
+          - name: ch.nw.grundwasservorkommen-isohypsen-mittelstand
+            title: Grundwasser Mittelstand
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/grundwasservorkommen-isohypsen-mittelstand.png 
+            sources:
+              - ch.nw.grundwasservorkommen-isohypsen-mittelstand
+          - name: ch.nw.grundwasservorkommen-isohypsen-druckspiegel
+            title: Druckspiegel mittel unteres Stockwerk
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/grundwasservorkommen-isohypsen-druckspiegel.png 
+            sources:
+              - ch.nw.grundwasservorkommen-isohypsen-druckspiegel
+          - name: ch.nw.grundwasservorkommen-isohypsen-hochstand-1999
+            title: Grundwasser Hochstand 1999
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/grundwasservorkommen-isohypsen-hochstand-1999.png 
+            sources:
+              - ch.nw.grundwasservorkommen-isohypsen-hochstand-1999
+          - name: ch.nw.grundwasservorkommen-isohypsen-hochstand-2005
+            title: Grundwasser Hochstand 2005
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/grundwasservorkommen-isohypsen-hochstand-2005.png 
+            sources:
+              - ch.nw.grundwasservorkommen-isohypsen-hochstand-2005
+      # GRUNDWASSERLEITER
+      - name: ch.nw.grundwasservorkommen-grundwasserleiter
+        title: Grundwasserleiter
+        layers:
+          - name: ch.nw.grundwasservorkommen-grundwasserleiter-stockwerkbau
+            title: Grundwasservorkommen mit Stockwerkbau
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/grundwasservorkommen-grundwasserleiter-stockwerkbau.png 
+            sources:
+              - ch.nw.grundwasservorkommen-grundwasserleiter-stockwerkbau
+          - name: ch.nw.grundwasservorkommen-grundwasserleiter-begrenzung-lockergestein
+            title: Begrenzung Grundwasserleiter Lockergestein
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/grundwasservorkommen-grundwasserleiter-begrenzung-lockergestein.png 
+            sources:
+              - ch.nw.grundwasservorkommen-grundwasserleiter-begrenzung-lockergestein
+          - name: ch.nw.grundwasservorkommen-grundwasserleiter-lockergestein
+            title: Grundwasserleiter Lockergestein
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/grundwasservorkommen-grundwasserleiter-lockergestein.png 
+            sources:
+              - ch.nw.grundwasservorkommen-grundwasserleiter-lockergestein
+      # DURCHLÄSSIGKEIT
+      - name: ch.nw.grundwasservorkommen-durchlaessigkeit
+        title: Durchlässigkeit Randgebiet Grundwasservorkommen
+        legendurl: https://www.gis-daten.ch/docs/nw/wms/grundwasservorkommen-durchlaessigkeit.png 
+        sources:
+          - ch.nw.grundwasservorkommen-durchlaessigkeit
+
+sources:
+  # QUELLHORIZONT
+  ch.nw.grundwasservorkommen-quellhorizont:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:9'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_grundwasserthemen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 
+
+  # ISOHYPSEN
+  # Grundwasser Mittelstand
+  ch.nw.grundwasservorkommen-isohypsen-mittelstand:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:11'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_grundwasserthemen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 
+  
+  # Druckspiegel mittel unteres Stockwerk
+  ch.nw.grundwasservorkommen-isohypsen-druckspiegel:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:12'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_grundwasserthemen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # Grundwasser Hochstand 1999
+  ch.nw.grundwasservorkommen-isohypsen-hochstand-1999:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:13'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_grundwasserthemen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # Grundwasser Hochstand 2005
+  ch.nw.grundwasservorkommen-isohypsen-hochstand-2005:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:14'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_grundwasserthemen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # GRUNDWASSERLEITER
+  # Grundwasservorkommen mit Stockwerkbau
+  ch.nw.grundwasservorkommen-grundwasserleiter-stockwerkbau:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:16'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_grundwasserthemen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+  
+  # Begrenzung Grundwasserleiter Lockergestein
+  ch.nw.grundwasservorkommen-grundwasserleiter-begrenzung-lockergestein:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:17'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_grundwasserthemen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+  
+  # Grundwasserleiter Lockergestein
+  ch.nw.grundwasservorkommen-grundwasserleiter-lockergestein:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:18'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_grundwasserthemen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # DURCHLÄSSIGKEIT
+  ch.nw.grundwasservorkommen-durchlaessigkeit:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:19'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_grundwasserthemen/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 

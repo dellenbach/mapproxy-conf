@@ -1,0 +1,88 @@
+base:
+  - base\globals.yaml
+  - base\grids.yaml
+
+# Services:
+  - services\demo-gisdaten.yaml
+  - services\ow-wms-gisdaten.yaml
+
+
+# Layers
+  # - b/nw_14_strassenverkehrszaehlung.yaml
+  # - sources/nw_73_nutzungsplanung.yaml
+  # - sources/nw_79_wanderwegnetze.yaml
+
+# Sources
+  - sources\ch.ow.administrative-einteilung.yaml
+  - sources\ch.ow.amphibienlaichgebiete-inventar.yaml
+  - sources\ch.ow.auengebiete-inventar.yaml
+  - sources\ch.ow.basisplan-av.yaml
+  - sources\ch.ow.bestehende-wasserentnahmen-inventar.yaml
+  # - sources\ch.ow.binnenschifffahrt.yaml
+  - sources\ch.ow.bodenbedeckung.yaml
+  - sources\ch.ow.dauernde-bodenverschiebung.yaml
+  - sources\ch.ow.einzelobjekte.yaml
+  - sources\ch.ow.fixpunkte.yaml
+  - sources\ch.ow.flachmoore-inventar.yaml
+  # - sources\ch.ow.forstliche-planung.yaml
+  - sources\ch.ow.fruchtfolgeflaechen.yaml
+  - sources\ch.ow.fuss-und-wanderwegnetze.yaml
+  - sources\ch.ow.gebaeudeadressen.yaml
+  - sources\ch.ow.gefahrengebiete.yaml
+  - sources\ch.ow.gefahrenkarte.yaml
+  - sources\ch.ow.gefahrenkataster.yaml
+  - sources\ch.ow.gemeindestrassen.yaml
+  - sources\ch.ow.geschuetzte-kulturobjekte.yaml
+  - sources\ch.ow.gewaessernetz.yaml
+  - sources\ch.ow.gewaesserraum.yaml
+  - sources\ch.ow.gewaesserschutzbereiche.yaml
+  # - sources\ch.ow.grundbuch.yaml
+  - sources\ch.ow.grundwasseraustritte.yaml
+  - sources\ch.ow.grundwasserschutzareale.yaml
+  - sources\ch.ow.grundwasserschutzzonen.yaml
+  - sources\ch.ow.grundwasservorkommen.yaml
+  - sources\ch.ow.historische-verkehrswege-inventar.yaml
+  - sources\ch.ow.hochmoore-inventar.yaml
+  - sources\ch.ow.hoehen.yaml
+  - sources\ch.ow.hoheitsgrenzen.yaml
+  - sources\ch.ow.kantonale-ausnahmetransportrouten.yaml
+  - sources\ch.ow.kataster-belasteter-standorte.yaml
+  # - sources\ch.ow.kommunale-entwaesserungsplanung-gep.yaml
+  - sources\ch.ow.laermbelastungskataster.yaml
+  - sources\ch.ow.laermempfindlichkeitsaufstufung.yaml
+  - sources\ch.ow.laermempfindlichkeitsstufen.yaml
+  - sources\ch.ow.landschaftsschutzgebiete-national.yaml
+  - sources\ch.ow.landschaftsschutzgebiete-regional.yaml
+  - sources\ch.ow.landwertzonen.yaml
+  - sources\ch.ow.liegenschaften.yaml
+  - sources\ch.ow.moorlandschaften.yaml
+  - sources\ch.ow.naturschutzobjekte-regional.yaml
+  - sources\ch.ow.naturschutzzonen-lokal.yaml
+  - sources\ch.ow.naturschutzzonen-regional.yaml
+  - sources\ch.ow.nomenklatur.yaml
+  - sources\ch.ow.nutzungsplanung-kantonal.yaml
+  - sources\ch.ow.nutzungsplanung-kommunal.yaml
+  - sources\ch.ow.plan-fuer-grundbuch.yaml
+  - sources\ch.ow.planung-revitalisierung-gewaesser.yaml
+  - sources\ch.ow.planungszonen.yaml
+  # - sources\ch.ow.planungszonen-kommunal.yaml
+  - sources\ch.ow.quartierplaene.yaml
+  - sources\ch.ow.richtplaene-kantonal.yaml
+  - sources\ch.ow.richtplan-wanderwege-kantonal.yaml
+  # - sources\ch.ow.rodungen.yaml
+  - sources\ch.ow.rohrleitungen.yaml
+  - sources\ch.ow.ruhezonen-wildtiere.yaml
+  - sources\ch.ow.sanierung-wasserkraft.yaml
+  - sources\ch.ow.schifffahrt.yaml
+  - sources\ch.ow.stand-der-erschliessung.yaml
+  - sources\ch.ow.statische-waldgrenzen.yaml
+  - sources\ch.ow.stauanlagen-kantonale-aufsicht.yaml
+  - sources\ch.ow.stromversorgungssicherheit.yaml
+  - sources\ch.ow.trockenwiesen-inventar.yaml
+  # - sources\ch.ow.uebersicht-waermenutzung.yaml
+  - sources\ch.ow.waldabstandslinien.yaml
+  - sources\ch.ow.waldreservate.yaml
+  - sources\ch.ow.zivilschutzkataster.yaml
+  
+# Nutzungsplanung
+# !include test_nw_nutzungsplanung.yaml --> hat so nicht funktioniert --> "sub-yaml" bei base hinzufügen (oben)

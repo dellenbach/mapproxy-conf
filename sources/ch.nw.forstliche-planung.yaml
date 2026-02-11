@@ -1,0 +1,67 @@
+parts:
+    coverages:
+        bboxnw: &bboxnw
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxow: &bboxow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxnwow: &bboxnwow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxlu: &bboxlu
+            bbox: [2630127, 1180568, 2681764, 1237690]
+            srs: 'EPSG:2056'
+        bboxels: &bboxels
+            bbox: [2620000, 1146000, 2724800, 1242000]
+            srs: 'EPSG:2056'
+        bboxclip: &bboxclip
+            bbox: [2660000, 1172000, 2680000, 1200000]
+            #datasource: Point(2660000, 1172000).buffer(2000)
+            srs: 'EPSG:2056'
+
+layers:
+  - name: ch.nw.forstliche-planung-standortverhaeltnisse
+    title: Forstliche Planung (Standortverhältnisse) (CH161)
+    legendurl: https://www.gis-daten.ch/docs/nw/wms/forstliche-planung-waldfunktionen.png
+    sources:
+      - ch.nw.forstliche-planung-standortverhaeltnisse
+  - name: ch.nw.forstliche-planung-waldfunktionen
+    title: Forstliche Planung (Waldfunktionen) (CH161)
+    legendurl: https://www.gis-daten.ch/docs/nw/wms/forstliche-planung-waldfunktionen.png
+    sources:
+      - ch.nw.forstliche-planung-waldfunktionen
+
+sources:
+  ch.nw.forstliche-planung-standortverhaeltnisse:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:1'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_gse_diverse/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 
+  ch.nw.forstliche-planung-waldfunktionen:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:8'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_gse_diverse/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 

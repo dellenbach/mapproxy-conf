@@ -1,0 +1,165 @@
+parts:
+    coverages:
+        bboxnw: &bboxnw
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxow: &bboxow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxnwow: &bboxnwow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxlu: &bboxlu
+            bbox: [2630127, 1180568, 2681764, 1237690]
+            srs: 'EPSG:2056'
+        bboxels: &bboxels
+            bbox: [2620000, 1146000, 2724800, 1242000]
+            srs: 'EPSG:2056'
+        bboxclip: &bboxclip
+            bbox: [2660000, 1172000, 2680000, 1200000]
+            #datasource: Point(2660000, 1172000).buffer(2000)
+            srs: 'EPSG:2056'
+
+layers:
+  - name: ch.ow.gefahrenkarte
+    title: Gefahrenkarte (CH166)
+    layers:
+      - name: ch.ow.gefahrenkarte-gefahrenstufe-synoptisch
+        title: Gefahrenstufe synoptisch
+        legendurl: https://www.gis-daten.ch/docs/ow/wms/gefahrenkarte-gefahrenstufe-synoptisch.png 
+        sources:
+          - ch.ow.gefahrenkarte-gefahrenstufe-synoptisch
+      - name: ch.ow.gefahrenkarte-gefahrenstufe-wasser
+        title: Gefahrenstufe Wasser
+        legendurl: https://www.gis-daten.ch/docs/ow/wms/gefahrenkarte-gefahrenstufen.png 
+        sources:
+          - ch.ow.gefahrenkarte-gefahrenstufe-wasser
+      - name: ch.ow.gefahrenkarte-gefahrenstufe-sturz
+        title: Gefahrenstufe Sturz
+        legendurl: https://www.gis-daten.ch/docs/ow/wms/gefahrenkarte-gefahrenstufen.png 
+        sources:
+          - ch.ow.gefahrenkarte-gefahrenstufe-sturz
+      - name: ch.ow.gefahrenkarte-gefahrenstufe-rutschung
+        title: Gefahrenstufe Rutschung
+        legendurl: https://www.gis-daten.ch/docs/ow/wms/gefahrenkarte-gefahrenstufen.png 
+        sources:
+          - ch.ow.gefahrenkarte-gefahrenstufe-rutschung
+      - name: ch.ow.gefahrenkarte-gefahrenstufe-lawine-schneegleiten
+        title: Gefahrenstufe Lawine und Schneegleiten
+        legendurl: https://www.gis-daten.ch/docs/ow/wms/gefahrenkarte-gefahrenstufen.png 
+        sources:
+          - ch.ow.gefahrenkarte-gefahrenstufe-lawine-schneegleiten
+      - name: ch.ow.gefahrenkarte-gefahrenstufe-einsturz-absenkung
+        title: Gefahrenstufe Einsturz und Absenkung
+        legendurl: https://www.gis-daten.ch/docs/ow/wms/gefahrenkarte-gefahrenstufen.png 
+        sources:
+          - ch.ow.gefahrenkarte-gefahrenstufe-einsturz-absenkung
+
+sources:
+  # SYNOPTISCH
+  ch.ow.gefahrenkarte-gefahrenstufe-synoptisch:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:2'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_naturgefahren/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow 
+
+  # WASSER
+  ch.ow.gefahrenkarte-gefahrenstufe-wasser:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:9'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_naturgefahren/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow 
+
+  # STURZ
+  ch.ow.gefahrenkarte-gefahrenstufe-sturz:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:10'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_naturgefahren/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow 
+
+  # RUTSCHUNG
+  ch.ow.gefahrenkarte-gefahrenstufe-rutschung:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:11'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_naturgefahren/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow 
+
+  # LAWINE UND SCHNEEGLEITEN
+  ch.ow.gefahrenkarte-gefahrenstufe-lawine-schneegleiten:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:12'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_naturgefahren/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow 
+
+  # EINSTURZ UND ABSENKUNG
+  ch.ow.gefahrenkarte-gefahrenstufe-einsturz-absenkung:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:13'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_naturgefahren/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxow 

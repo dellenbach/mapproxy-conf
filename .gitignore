@@ -1,0 +1,21 @@
+# MapProxy Cache-Daten
+cache_data/
+
+# Temporäre Dateien
+*.tmp
+*.bak
+*.swp
+*~
+
+# OS-Dateien
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Backup-Dateien
+*.yaml.bak

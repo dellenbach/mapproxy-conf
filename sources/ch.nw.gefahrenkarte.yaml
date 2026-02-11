@@ -1,0 +1,582 @@
+parts:
+    coverages:
+        bboxnw: &bboxnw
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxow: &bboxow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxnwow: &bboxnwow
+            bbox: [2643483, 1171738, 2702269, 1216819]
+            srs: 'EPSG:2056'
+        bboxlu: &bboxlu
+            bbox: [2630127, 1180568, 2681764, 1237690]
+            srs: 'EPSG:2056'
+        bboxels: &bboxels
+            bbox: [2620000, 1146000, 2724800, 1242000]
+            srs: 'EPSG:2056'
+        bboxclip: &bboxclip
+            bbox: [2660000, 1172000, 2680000, 1200000]
+            #datasource: Point(2660000, 1172000).buffer(2000)
+            srs: 'EPSG:2056'
+
+layers:
+  - name: ch.nw.gefahrenkarte-synoptisch
+    title: Gefahrenkarte (CH166)
+    layers:
+      # SYNOPTISCH
+      - name: ch.nw.gefahrenkarte-synoptisch
+        title: Gefahren synoptisch
+        legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-gefahren.png
+        sources:
+          - ch.nw.gefahrenkarte-synoptisch
+      # WASSER
+      - name: ch.nw.gefahrenkarte-wasser
+        title: Wasser
+        layers:
+          - name: ch.nw.gefahrenkarte-wasser-gefahren
+            title: Gefahren Wasser
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-gefahren.png
+            sources:
+              - ch.nw.gefahrenkarte-wasser-gefahren
+          - name: ch.nw.gefahrenkarte-wasser-intensitaet-extrem
+            title: Intensität extrem
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-intensitaeten.png
+            sources:
+              - ch.nw.gefahrenkarte-wasser-intensitaet-extrem
+          - name: ch.nw.gefahrenkarte-wasser-intensitaet-300
+            title: Intensität 300
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-intensitaeten.png
+            sources:
+              - ch.nw.gefahrenkarte-wasser-intensitaet-300
+          - name: ch.nw.gefahrenkarte-wasser-intensitaet-100
+            title: Intensität 100
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-intensitaeten.png
+            sources:
+              - ch.nw.gefahrenkarte-wasser-intensitaet-100
+          - name: ch.nw.gefahrenkarte-wasser-intensitaet-030
+            title: Intensität 030
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-intensitaeten.png
+            sources:
+              - ch.nw.gefahrenkarte-wasser-intensitaet-030
+      # RUTSCHUNG
+      - name: ch.nw.gefahrenkarte-rutschung
+        title: Rutschung
+        layers:
+          - name: ch.nw.gefahrenkarte-rutschung-gefahren
+            title: Gefahren Rutschung
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-gefahren.png
+            sources:
+              - ch.nw.gefahrenkarte-rutschung-gefahren
+          - name: ch.nw.gefahrenkarte-rutschung-intensitaet-300
+            title: Intensität 300
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-intensitaeten.png
+            sources:
+              - ch.nw.gefahrenkarte-rutschung-intensitaet-300
+          - name: ch.nw.gefahrenkarte-rutschung-intensitaet-100
+            title: Intensität 100
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-intensitaeten.png
+            sources:
+              - ch.nw.gefahrenkarte-rutschung-intensitaet-100
+          - name: ch.nw.gefahrenkarte-rutschung-intensitaet-030
+            title: Intensität 030
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-intensitaeten.png
+            sources:
+              - ch.nw.gefahrenkarte-rutschung-intensitaet-030
+      # STURZ
+      - name: ch.nw.gefahrenkarte-sturz
+        title: Sturz
+        layers:
+          - name: ch.nw.gefahrenkarte-sturz-gefahren
+            title: Gefahren Sturz
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-gefahren.png
+            sources:
+              - ch.nw.gefahrenkarte-sturz-gefahren
+          - name: ch.nw.gefahrenkarte-sturz-intensitaet-extrem
+            title: Intensität extrem
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-intensitaeten.png
+            sources:
+              - ch.nw.gefahrenkarte-sturz-intensitaet-extrem
+          - name: ch.nw.gefahrenkarte-sturz-intensitaet-300
+            title: Intensität 300
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-intensitaeten.png
+            sources:
+              - ch.nw.gefahrenkarte-sturz-intensitaet-300
+          - name: ch.nw.gefahrenkarte-sturz-intensitaet-100
+            title: Intensität 100
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-intensitaeten.png
+            sources:
+              - ch.nw.gefahrenkarte-sturz-intensitaet-100
+          - name: ch.nw.gefahrenkarte-sturz-intensitaet-030
+            title: Intensität 030
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-intensitaeten.png
+            sources:
+              - ch.nw.gefahrenkarte-sturz-intensitaet-030
+      # LAWINE
+      - name: ch.nw.gefahrenkarte-lawine
+        title: Lawine
+        layers:
+          - name: ch.nw.gefahrenkarte-lawine-gefahren
+            title: Gefahren Lawine
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-gefahren.png
+            sources:
+              - ch.nw.gefahrenkarte-lawine-gefahren
+          - name: ch.nw.gefahrenkarte-lawine-intensitaet-300
+            title: Intensität 300
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-intensitaeten.png
+            sources:
+              - ch.nw.gefahrenkarte-lawine-intensitaet-300
+          - name: ch.nw.gefahrenkarte-lawine-intensitaet-100
+            title: Intensität 100
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-intensitaeten.png
+            sources:
+              - ch.nw.gefahrenkarte-lawine-intensitaet-100
+          - name: ch.nw.gefahrenkarte-lawine-intensitaet-030
+            title: Intensität 030
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-intensitaeten.png
+            sources:
+              - ch.nw.gefahrenkarte-lawine-intensitaet-030
+      # ERHEBUNGSGEBIETE
+      - name: ch.nw.gefahrenkarte-erhebungsgebiete
+        title: Erhebungsgebiete
+        layers:
+          - name: ch.nw.gefahrenkarte-erhebungsgebiete-wasser
+            title: Erhebungsgebiet Wasser
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-erhebungsgebiete.png
+            sources:
+              - ch.nw.gefahrenkarte-erhebungsgebiete-wasser
+          - name: ch.nw.gefahrenkarte-erhebungsgebiete-rutschung
+            title: Erhebungsgebiet Rutschung
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-erhebungsgebiete.png
+            sources:
+              - ch.nw.gefahrenkarte-erhebungsgebiete-rutschung
+          - name: ch.nw.gefahrenkarte-erhebungsgebiete-sturz
+            title: Erhebungsgebiet Sturz
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-erhebungsgebiete.png
+            sources:
+              - ch.nw.gefahrenkarte-erhebungsgebiete-sturz
+          - name: ch.nw.gefahrenkarte-erhebungsgebiete-lawine
+            title: Erhebungsgebiet Lawine
+            legendurl: https://www.gis-daten.ch/docs/nw/wms/gefahrenkarte-erhebungsgebiete.png
+            sources:
+              - ch.nw.gefahrenkarte-erhebungsgebiete-lawine
+
+sources:
+  # SYNOPTISCH
+  ch.nw.gefahrenkarte-synoptisch:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:0'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 
+
+  # WASSER
+  # Gefahren
+  ch.nw.gefahrenkarte-wasser-gefahren:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:5'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 
+
+  # Intensität extrem
+  ch.nw.gefahrenkarte-wasser-intensitaet-extrem:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:7'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # Intensität 300
+  ch.nw.gefahrenkarte-wasser-intensitaet-300:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:8'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # Intensität 100
+  ch.nw.gefahrenkarte-wasser-intensitaet-100:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:9'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # Intensität 030
+  ch.nw.gefahrenkarte-wasser-intensitaet-030:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:10'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # RUTSCHUNG
+  # Gefahren
+  ch.nw.gefahrenkarte-rutschung-gefahren:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:12'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 
+
+  # Intensität 300
+  ch.nw.gefahrenkarte-rutschung-intensitaet-300:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:14'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # Intensität 100
+  ch.nw.gefahrenkarte-rutschung-intensitaet-100:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:15'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # Intensität 030
+  ch.nw.gefahrenkarte-rutschung-intensitaet-030:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:16'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 
+
+  # STURZ
+  # Gefahren
+  ch.nw.gefahrenkarte-sturz-gefahren:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:18'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 
+
+  # Intensität extrem
+  ch.nw.gefahrenkarte-sturz-intensitaet-extrem:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:20'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # Intensität 300
+  ch.nw.gefahrenkarte-sturz-intensitaet-300:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:21'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # Intensität 100
+  ch.nw.gefahrenkarte-sturz-intensitaet-100:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:22'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # Intensität 030
+  ch.nw.gefahrenkarte-sturz-intensitaet-030:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:23'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # LAWINE
+  # Gefahren
+  ch.nw.gefahrenkarte-lawine-gefahren:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:25'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 
+
+  # Intensität 300
+  ch.nw.gefahrenkarte-lawine-intensitaet-300:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:27'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # Intensität 100
+  ch.nw.gefahrenkarte-lawine-intensitaet-100:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:28'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # Intensität 030
+  ch.nw.gefahrenkarte-lawine-intensitaet-030:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:29'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw
+
+  # ERHEBUNGSGEBIETE
+  # Wasser
+  ch.nw.gefahrenkarte-erhebungsgebiete-wasser:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:138'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 
+
+  # Rutschung
+  ch.nw.gefahrenkarte-erhebungsgebiete-rutschung:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:139'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 
+
+  # Sturz
+  ch.nw.gefahrenkarte-erhebungsgebiete-sturz:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:140'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 
+
+  # Lawine
+  ch.nw.gefahrenkarte-erhebungsgebiete-lawine:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: 'show:141'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_naturgefahren_gefahrenkarte/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: true
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *bboxnw 

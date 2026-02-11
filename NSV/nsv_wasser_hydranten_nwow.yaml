@@ -1,0 +1,147 @@
+base:
+  - base/globals.yaml
+  - base/grids.yaml
+services:
+  demo: null
+  wms:
+    versions:
+      - 1.3.0
+      - 1.1.1
+    srs:
+      - 'EPSG:2056'
+      - 'EPSG:21781'
+      - 'EPSG:4326'
+      - 'EPSG:4258'
+      - 'CRS:84'
+      - 'EPSG:3857'
+      - 'EPSG:900913'
+    bbox_srs:
+      - 'EPSG:2056'
+    image_formats:
+      - image/jpeg
+      - image/png
+      - image/gif
+      - image/GeoTIFF
+      - image/tiff
+    attribution:
+      text: ''
+    on_source_errors: raise
+    strict: false
+    featureinfo_types:
+      - text
+      - xml
+    md:
+      title: WMS NWOW Wasser Hydranten
+      abstract: WMS NWOW Wasser Hydranten
+      online_resource: 'https://www.gis-daten.ch'
+      contact:
+        organization: GIS Daten AG
+        address: Aemaettlistrasse 2
+        city: Stans
+        postcode: 6370
+        country: Switzerland
+        phone: +41 (0)41 618 61 12
+        email: support@gis-daten.ch
+      access_constraints: >-
+        Dieser WMS darf nur fuer .... verwendet
+        werden.
+parts:
+  coverages:
+    bboxnw: &ref_0
+      bbox:
+        - 2643483
+        - 1171738
+        - 2702269
+        - 1216819
+      srs: 'EPSG:2056'
+    bboxow:
+      bbox:
+        - 2643483
+        - 1171738
+        - 2702269
+        - 1216819
+      srs: 'EPSG:2056'
+    bboxnwow:
+      bbox:
+        - 2643483
+        - 1171738
+        - 2702269
+        - 1216819
+      srs: 'EPSG:2056'
+    bboxlu:
+      bbox:
+        - 2630127
+        - 1180568
+        - 2681764
+        - 1237690
+      srs: 'EPSG:2056'
+    bboxels:
+      bbox:
+        - 2620000
+        - 1146000
+        - 2724800
+        - 1242000
+      srs: 'EPSG:2056'
+    bboxclip:
+      bbox:
+        - 2660000
+        - 1172000
+        - 2680000
+        - 1200000
+      srs: 'EPSG:2056'
+layers:
+  - name: WMS NWOW Wasser Hydranten
+    title: WMS NWOW Wasser Hydranten
+    sources:
+      - ch.WMS NWOW Wasser Hydranten
+sources:
+  ch.WMS NWOW Wasser Hydranten:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+      client_timeout: 600
+      headers:
+        X-Esri-Authorization: Bearer yL3pVAuQAPBZ3SSBtaqhid0fWtmr7HNAT6bt8HWkGnyRB9TVbO8chqSlmgR14WpV
+    req:
+      layers: show:7,8,18,19
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach_sec/nw_nsv_werkinformation/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: false
+    supported_srs:
+      - 'EPSG:2056'
+      - 'EPSG:3857'
+    coverage: *ref_0
+globals:
+  srs:
+    axis_order_en:
+      - 'EPSG:21781'
+      - 'EPSG:2056'
+      - 'EPSG:3857'
+  cache:
+    base_dir: ./cache_data
+    lock_dir: ./cache_data/locks
+    tile_lock_dir: ./cache_data/tile_locks
+    meta_size:
+      - 4
+      - 4
+    meta_buffer: 80
+  image:
+    resampling_method: bicubic
+    stretch_factor: 1.15
+    max_shrink_factor: 4
+    paletted: false
+    formats:
+      custom_format:
+        format: image/png
+        mode: P
+        colors: 32
+        transparent: true
+        encoding_options:
+          quantizer: fastoctree
+      image/jpeg:
+        encoding_options:
+          jpeg_quality: 80

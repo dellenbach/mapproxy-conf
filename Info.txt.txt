@@ -1,0 +1,19 @@
+Juli 2022, We 
+
+https://www.gis-daten.ch/wms/st_wasser_hydranten_armaturen/service?
+
+Geschützte Kartendienste
+
+https://www.gis-daten.ch/wms/dataver/service?
+https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach_sec/ow_abwasser/MapServer
+
+https://www.gis-daten.ch/wms/infra3d/service?
+https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach_sec/ow_lkat/MapServer
+
+https://www.gis-daten.ch/wms/st_wasser_hydranten_armaturen/service?
+https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/nw_gemeinden/st_wasser_hydranten_armaturen/MapServer
+
+https://www.gis-daten.ch/wms/titlisbahnen/service?
+https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach_sec/nw_lkat/MapServer
+https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach_sec/ow_lkat/MapServer
+https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach_sec/ow_oekomorphologie/MapServer

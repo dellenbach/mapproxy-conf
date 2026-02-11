@@ -1,0 +1,94 @@
+base:
+  - base\globals.yaml
+  - base\grids.yaml
+
+# Services:
+  - services\demo-gisdaten.yaml
+  - services\nw-wms-gisdaten.yaml
+
+
+# Layers
+  # - b/nw_14_strassenverkehrszaehlung.yaml
+  # - sources/nw_73_nutzungsplanung.yaml
+  # - sources/nw_79_wanderwegnetze.yaml
+
+# Sources
+  - sources\ch.nw.administrative-einteilung.yaml
+  - sources\ch.nw.basisplan-av.yaml                                                         
+  - sources\ch.nw.bebauungsplaene.yaml
+  - sources\ch.nw.bestehende-wasserentnahmen-inventar.yaml                                                      
+  - sources\ch.nw.binnenschifffahrt.yaml
+  # - sources\ch.nw.bodenaltertuemer-inventar.yaml
+  - sources\ch.nw.bodenbedeckung.yaml                                                    
+  - sources\ch.nw.bodenbelastung.yaml
+  - sources\ch.nw.dauernde-bodenverschiebung.yaml  
+  - sources\ch.nw.einzelobjekte.yaml                                                     
+  - sources\ch.nw.erdbebenmikrozonierung.yaml                                               
+  #- sources\ch.nw.fischschongebiete.yaml
+  - sources\ch.nw.fixpunkte.yaml 
+  # - sources\ch.nw.forstliche-planung.yaml                                                
+  - sources\ch.nw.fruchtfolgeflaechen.yaml                                                  
+  - sources\ch.nw.fusswegnetze.yaml
+  - sources\ch.nw.gebaeudeadressen.yaml                                                         
+  - sources\ch.nw.gefahrenkarte.yaml                                                        
+  - sources\ch.nw.gestaltungsplaene.yaml 
+  - sources\ch.nw.gewaessernetz.yaml                                                   
+  - sources\ch.nw.gewaesserraum.yaml                                                        
+  - sources\ch.nw.gewaesserschutzbereiche.yaml                                              
+  # - sources\ch.nw.grundbuch.yaml                                                            
+  - sources\ch.nw.grundwasseraustritte.yaml                                                 
+  - sources\ch.nw.grundwasserschutzareale.yaml                                              
+  - sources\ch.nw.grundwasserschutzzonen.yaml                                               
+  - sources\ch.nw.grundwasservorkommen.yaml
+  - sources\ch.nw.historische-verkehrswege-inventar.yaml
+  - sources\ch.nw.hoehen.yaml
+  - sources\ch.nw.hoheitsgrenzen.yaml                                              
+  - sources\ch.nw.jagdbanngebiete-kantonal.yaml                                             
+  - sources\ch.nw.kantonale-ausnahmetransportrouten.yaml                                             
+  - sources\ch.nw.kataster-belasteter-standorte.yaml                                        
+  # - sources\ch.nw.kommunale-entwaesserungsplanung-gep.yaml
+  - sources\ch.nw.kulturgueter-inventar.yaml                                                  
+  - sources\ch.nw.laermbelastungskataster.yaml
+  - sources\ch.nw.laermempfindlichkeitsaufstufung.yaml  
+  - sources\ch.nw.laermempfindlichkeitsstufen.yaml                                              
+  - sources\ch.nw.landschaftsschutz-national-regional.yaml                                 
+  - sources\ch.nw.landwertzonen.yaml
+  - sources\ch.nw.landwirtschaftliche-kulturflaechen.yaml
+  - sources\ch.nw.liegenschaften.yaml
+  - sources\ch.nw.naturschutzobjekte-inventar.yaml
+  - sources\ch.nw.nomenklatur.yaml                                                          
+  - sources\ch.nw.nutzungsplanung.yaml                                                        
+  - sources\ch.nw.oeffentlicher-verkehr.yaml
+  - sources\ch.nw.ortsbildschutzobjekte-inventar.yaml                                                  
+  - sources\ch.nw.pflanzenschutzgebiete.yaml                                                  
+  - sources\ch.nw.plan-fuer-grundbuch.yaml                                                    
+  - sources\ch.nw.planung-revitalisierung-gewaesser.yaml                                      
+  - sources\ch.nw.planungszonen.yaml                                                 
+  # - sources\ch.nw.planungszonen-kommunal.yaml   ## voraussichtlich löschen, da kommunale und kantonale Planungszonen in gleichem Layer
+  - sources\ch.nw.richtplaene-kantonal.yaml
+  - sources\ch.nw.richtplaene-kommunal.yaml
+  - sources\ch.nw.rohrleitungen.yaml                                                
+  - sources\ch.nw.ruhezonen-wildtiere.yaml                                                    
+  - sources\ch.nw.sanierung-wasserkraft.yaml                                                  
+  #- sources\ch.nw.schutzgebiet-gnappiried.yaml                                                
+  #- sources\ch.nw.schutzgebiet-stansstaderried.yaml                                           
+  - sources\ch.nw.seeuferkonzept-vierwaldstaettersee.yaml                                     
+  - sources\ch.nw.seilbahnen-skilifte.yaml                                                    
+  - sources\ch.nw.stand-der-erschliessung.yaml                                                
+  - sources\ch.nw.statische-waldgrenzen.yaml                                                  
+  - sources\ch.nw.stauanlagen-kantonale-aufsicht.yaml                                         
+  - sources\ch.nw.strassenverkehrszaehlung.yaml
+  - sources\ch.nw.strassenverzeichnis.yaml                                               
+  - sources\ch.nw.stromversorgungssicherheit.yaml
+  - sources\ch.nw.trockenwiesen-inventar.yaml                                             
+  # - sources\ch.nw.versorgungsgebiete-oeffentliche-wasserversorgungsorganisationen.yaml        
+  - sources\ch.nw.waermenutzung.yaml                                         
+  - sources\ch.nw.waldabstandslinien.yaml                                              
+  - sources\ch.nw.waldreservate.yaml                                                          
+  - sources\ch.nw.wanderwegnetze.yaml                                                         
+  # - sources\ch.nw.wasserrechtsverzeichnis.yaml                                                
+  # 
+
+
+# Nutzungsplanung
+# !include test_nw_nutzungsplanung.yaml --> hat so nicht funktioniert --> "sub-yaml" bei base hinzufügen (oben)

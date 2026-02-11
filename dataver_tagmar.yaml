@@ -1,0 +1,210 @@
+base:
+  - base/globals.yaml
+  - base/grids.yaml
+services:
+  demo: null
+  wms:
+    versions:
+      - 1.3.0
+      - 1.1.1
+    srs:
+      - 'EPSG:2056'
+      - 'EPSG:21781'
+    bbox_srs:
+      - 'EPSG:2056'
+    image_formats:
+      - image/jpeg
+      - image/png
+      - image/gif
+      - image/GeoTIFF
+      - image/tiff
+    attribution:
+      text: ''
+    on_source_errors: raise
+    strict: false
+    featureinfo_types:
+      - text
+      - xml
+    md:
+      title: WMS Basisdaten (nur fuer interne Zwecke)
+      abstract: WMS Dienste fuer Trigonet AG
+      online_resource: 'https://www.trigonet.ch'
+      contact:
+        organization: Trigonet AG
+        address: Aemaettlistrasse 2
+        city: Stans
+        postcode: 6370
+        country: Switzerland
+        phone: +41 (0)41 618 61 10
+        email: support@trigonet.ch
+      access_constraints: Dieser WMS darf nur fuer Dataver der Tagmar AG benutzt verwendet werden.
+parts:
+  coverages:
+    bboxnw:
+      bbox:
+        - 2643483
+        - 1171738
+        - 2702269
+        - 1216819
+      srs: 'EPSG:2056'
+    bboxow:
+      bbox:
+        - 2643483
+        - 1171738
+        - 2702269
+        - 1216819
+      srs: 'EPSG:2056'
+    bboxnwow:
+      bbox:
+        - 2643483
+        - 1171738
+        - 2702269
+        - 1216819
+      srs: 'EPSG:2056'
+    bboxlu: &ref_0
+      bbox:
+        - 2630127
+        - 1180568
+        - 2681764
+        - 1237690
+      srs: 'EPSG:2056'
+    bboxclip:
+      bbox:
+        - 2660000
+        - 1172000
+        - 2680000
+        - 1200000
+      srs: 'EPSG:2056'
+    bboxzg:
+      bbox:
+        - 2662594
+        - 1209565
+        - 2712236
+        - 1239612
+      srs: 'EPSG:2056'
+    bboxai:
+      bbox:
+        - 2630000
+        - 1150000
+        - 2720000
+        - 1260000
+      srs: 'EPSG:2056'
+    bboxch:
+      bbox:
+        - 2480000
+        - 1062000
+        - 2865000
+        - 1302000
+      srs: 'EPSG:2056'
+layers:
+  - name: basisplan
+    title: Basisplan intern
+    sources:
+      - ch.lu.luz_basisplan_gis_farbig
+      - ch.lu.luz_basisplan_gis_dynamisch
+  - name: abwasser
+    title: Abwasser mit Basisplan intern
+    sources:
+      - ch.lu.luz_basisplan_gis_farbig
+      - ch.lu.luz_basisplan_gis_dynamisch
+  - name: orthofoto
+    title: Orthofoto LU
+    sources:
+      - ch.lu.orthofoto
+sources:
+  ch.lu.luz_basisplan_gis_farbig:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: all
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/tn_basis/luz_basisplan_gis_farbig/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: false
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *ref_0
+  ch.lu.luz_basisplan_gis_dynamisch:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: all
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/tn_basis/luz_basisplan_gis_dynamisch/MapServer
+      transparent: true
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: false
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *ref_0
+  ch.lu.orthofoto:
+    type: arcgis
+    http:
+      ssl_no_cert_checks: true
+    req:
+      layers: '1,2'
+      url: >-
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/tn_basis/lu_swissimage/MapServer
+      transparent: false
+    opts:
+      featureinfo: true
+      featureinfo_tolerance: 10
+      featureinfo_return_geometries: false
+    supported_srs:
+      - 'EPSG:2056'
+    coverage: *ref_0
+grids:
+  webmercator:
+    base: GLOBAL_WEBMERCATOR
+  epsg_2056:
+    res:
+      - 66.1459656252646
+      - 39.687579375158755
+      - 26.458386250105836
+      - 13.229193125052918
+      - 6.614596562526459
+      - 3.9687579375158752
+    bbox:
+      - 2480000
+      - 1062000
+      - 2865000
+      - 1302000
+    bbox_srs: 'EPSG:2056'
+    srs: 'EPSG:2056'
+    origin: nw
+globals:
+  srs:
+    axis_order_en:
+      - 'EPSG:21781'
+      - 'EPSG:2056'
+  cache:
+    base_dir: ./cache_data
+    lock_dir: ./cache_data/locks
+    tile_lock_dir: ./cache_data/tile_locks
+    meta_size:
+      - 4
+      - 4
+    meta_buffer: 80
+  image:
+    resampling_method: bicubic
+    stretch_factor: 1.15
+    max_shrink_factor: 4
+    paletted: false
+    formats:
+      custom_format:
+        format: image/png
+        mode: P
+        colors: 32
+        transparent: true
+        encoding_options:
+          quantizer: fastoctree
+      image/jpeg:
+        encoding_options:
+          jpeg_quality: 80
