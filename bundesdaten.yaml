@@ -23,22 +23,22 @@
 #     initial doc: http://localhost:8080/kml/osm/webmercator
 
 #base: ['base/globals.yaml','base/sourcesgd.yaml','base/servicewmsgd.yaml']
-base: ['base/globals.yaml','base/grids.yaml']
+base: [ 'base/globals.yaml', 'base/grids.yaml' ]
 
 services:
   demo:
   wms:
     # only offer WMS 1.1.1
-    versions: ['1.3.0', '1.1.1']
+    versions: [ '1.3.0', '1.1.1' ]
 
     # supported SRS for this WMS
-    srs: ['EPSG:2056']
+    srs: [ 'EPSG:2056', 'EPSG:4326' ]
 
     # force the layer extents (BBOX) to be displayed in this SRS
-    bbox_srs: ['EPSG:2056']
+    bbox_srs: [ 'EPSG:2056' ]
 
     # limit the supported image formats.
-    image_formats: ['image/jpeg', 'image/png', 'image/gif', 'image/GeoTIFF', 'image/tiff']
+    image_formats: [ 'image/jpeg', 'image/png', 'image/gif', 'image/GeoTIFF', 'image/tiff' ]
 
     # add attribution text in the lower-right corner.
     attribution:
@@ -54,7 +54,7 @@ services:
     strict: false
 
     # list of feature info types the server should offer
-    featureinfo_types: ['text', 'xml']
+    featureinfo_types: [ 'text', 'xml' ]
 
     md:
       # metadata used in capabilities documents
@@ -70,8 +70,7 @@ services:
         phone: +41 (0)41 618 61 12
         email: support@gis-daten.ch
       # multiline strings are possible with the right indention
-      access_constraints:
-        Dieser WMS darf nur fuer die GIS Daten AG verwendet werden.
+      access_constraints: Dieser WMS darf nur fuer die GIS Daten AG verwendet werden.
   wmts:
     # use restful access to WMTS
     restful: true
@@ -80,20 +79,20 @@ services:
     # and also allow KVP requests
     kvp: true
     # # only offer WMS 1.1.1
-    versions: ['1.3.0']
+    versions: [ '1.3.0' ]
 
     # # supported SRS for this WMS
-    srs: ['EPSG:2056']
+    srs: [ 'EPSG:2056', 'EPSG:4326' ]
 
     # # force the layer extents (BBOX) to be displayed in this SRS
     # bbox_srs: ['EPSG:2056']
 
     # # limit the supported image formats.
-    image_formats: ['image/png', 'image/jpeg']
+    image_formats: [ 'image/png', 'image/jpeg' ]
 
     # # add attribution text in the lower-right corner.
     # attribution:
-      # text: 'Rasterdaten (c) swisstopo, AV-Daten (c) GIS Daten AG'
+    # text: 'Rasterdaten (c) swisstopo, AV-Daten (c) GIS Daten AG'
 
     # # return an OGC service exception when one or more sources return errors
     # # or no response at all (e.g. timeout)
@@ -120,76 +119,75 @@ services:
         phone: +41 (0)41 618 61 12
         email: support@gis-daten.ch
       # multiline strings are possible with the right indention
-      access_constraints:
-        Orthofoto 10cm 2021
+      access_constraints: Orthofoto 10cm 2021
 
 parts:
-    coverages:
-        bboxnw: &bboxnw
-            bbox: [2643483, 1171738, 2702269, 1216819]
-            srs: 'EPSG:2056'
-        bboxow: &bboxow
-            bbox: [2643483, 1171738, 2702269, 1216819]
-            srs: 'EPSG:2056'
-        bboxnwow: &bboxnwow
-            bbox: [2643483, 1171738, 2702269, 1216819]
-            srs: 'EPSG:2056'
-        bboxlu: &bboxlu
-            bbox: [2630127, 1180568, 2681764, 1237690]
-            srs: 'EPSG:2056'
-        bboxels: &bboxels
-            bbox: [2620000, 1146000, 2724800, 1242000]
-            srs: 'EPSG:2056'
-        bboxclip: &bboxclip
-            bbox: [2660000, 1172000, 2680000, 1200000]
-            #datasource: Point(2660000, 1172000).buffer(2000)
-            srs: 'EPSG:2056'
-        bboxch: &bboxch
-            bbox: [2480000, 1062000, 2865000, 1302000]
-            srs: 'EPSG:2056'
+  coverages:
+    bboxnw: &bboxnw
+      bbox: [ 2643483, 1171738, 2702269, 1216819 ]
+      srs: 'EPSG:2056'
+    bboxow: &bboxow
+      bbox: [ 2643483, 1171738, 2702269, 1216819 ]
+      srs: 'EPSG:2056'
+    bboxnwow: &bboxnwow
+      bbox: [ 2643483, 1171738, 2702269, 1216819 ]
+      srs: 'EPSG:2056'
+    bboxlu: &bboxlu
+      bbox: [ 2630127, 1180568, 2681764, 1237690 ]
+      srs: 'EPSG:2056'
+    bboxels: &bboxels
+      bbox: [ 2620000, 1146000, 2724800, 1242000 ]
+      srs: 'EPSG:2056'
+    bboxclip: &bboxclip
+      bbox: [ 2660000, 1172000, 2680000, 1200000 ]
+      #datasource: Point(2660000, 1172000).buffer(2000)
+      srs: 'EPSG:2056'
+    bboxch: &bboxch
+      bbox: [ 2480000, 1062000, 2865000, 1302000 ]
+      srs: 'EPSG:2056'
 
 layers:
-    
-  - name: ch.swisstopo.swissimage
-    title: Orthophoto Swissimage
-    #min_res: 20
-    #max_res: 10
-    sources: [ch.swisstopo.swissimage.cache]
-    # sources: [ch.nwow.orthophoto]
-    # sources: [ch.nwow.orthophoto,ch.nw.landwirtschaft]
 
-      
+- name: ch.swisstopo.swissimage
+  title: Orthophoto Swissimage
+  #min_res: 20
+  #max_res: 10
+  sources: [ ch.swisstopo.swissimage.cache ]
+  # sources: [ch.nwow.orthophoto]
+  # sources: [ch.nwow.orthophoto,ch.nw.landwirtschaft]
+
+
 sources:
-        
-#Nidwalden und Obwalden
-       
-      ch.swisstopo.swissimage:
-        http:
-          ssl_no_cert_checks: true
-        type: wms
-        #min_res: 1000000
-        #max_res: 50
-        req:
-          layers: ch.swisstopo.images-swissimage
-          url: 'https://wms.geo.admin.ch/'
-          transparent: true
-        wms_opts:
-          version: 1.3.0
-          featureinfo: true
-          featureinfo_tolerance: 10
-        supported_srs: ['EPSG:2056']
-        coverage: *bboxch
-        
+
+  #Nidwalden und Obwalden
+
+  ch.swisstopo.swissimage:
+    http:
+      ssl_no_cert_checks: true
+    type: wms
+    #min_res: 1000000
+    #max_res: 50
+    req:
+      layers: ch.swisstopo.images-swissimage
+      url: 'https://wms.geo.admin.ch/'
+      transparent: true
+    wms_opts:
+      version: 1.3.0
+      featureinfo: true
+      featureinfo_tolerance: 10
+    supported_srs: [ 'EPSG:2056', 'EPSG:4326' ]
+    coverage: *bboxch
+
 caches:
   ch.swisstopo.swissimage.cache:
-    grids: [gisdaten_grid2056]
+    grids: [ gisdaten_grid2056, gisdaten_grid4326 ]
     # grids: [GLOBAL_WEBMERCATOR]
-    sources: [ch.swisstopo.swissimage]
+    sources: [ ch.swisstopo.swissimage ]
     #disable_storage: true
     #format: mixed
-    
+
     # request a meta tile, that consists of m x n tiles
-    meta_size: [6, 6]
+    meta_size: [ 6, 6 ]
     # allow to make 2 parallel requests to the sources for missing tiles
     concurrent_tile_creators: 16
 
@@ -202,76 +200,85 @@ caches:
       directory: //trigopgis04.file.core.windows.net/cache/mapproxy/cache2056/ch.swisstopo.swissimage/_alllayers
 #      type: sqlite
 #      directory: //trigopgis04.file.core.windows.net/cache/mapproxy/ch.swisstopo.swissimage
-    
+
 grids:
 
   localgrid:
     base: GLOBAL_WEBMERCATOR
     srs: EPSG:2056
-    bbox: [2643483, 1171738, 2702269, 1216819]
+    bbox: [ 2643483, 1171738, 2702269, 1216819 ]
     bbox_srs: EPSG:2056
     # tile_size: [256,256]
     # res: [64, 256, 1024, 4096, 16384]
     min_res: 64
     # res_factor: sqrt2
-    
+
   gisdaten_grid2056:
     #base: GLOBAL_MERCATOR
     srs: EPSG:2056
-    bbox: [2480000, 1062000, 2865000, 1302000]
+    bbox: [ 2480000, 1062000, 2865000, 1302000 ]
     bbox_srs: EPSG:2056
     origin: 'nw'
-    tile_size: [256,256]
+    tile_size: [ 256, 256 ]
     #stretch_factor: 2.1
     #threshold_res: [50]
     #aus schema
-    
-    res: [66.145965625264594, 39.687579375158755, 26.458386250105836, 13.229193125052918, 6.6145965625264589, 3.9687579375158752, 2.6458386250105836, 1.3229193125052918, 0.79375158750317509, 0.52916772500211673, 0.26458386250105836, 0.13229193125052918, 0.066145965625264591]
+
+    res: [ 66.1459656252646, 39.687579375158755, 26.458386250105836, 13.229193125052918, 6.614596562526459, 3.9687579375158752, 2.6458386250105836, 1.3229193125052918, 0.7937515875031751, 0.5291677250021167, 0.26458386250105836, 0.13229193125052918, 0.06614596562526459 ]
     #C:\mapproxy\Python312\Scripts\mapproxy-util.exe scales --unit m --dpi 90.71428571429 --as-res-config 250000 150000 100000 50000 25000 15000 10000     res: [
-#    res: [
-#         #  res            level     scale @90.7 DPI
-#           70.0000000000, #  0      250000.00000000
-#           42.0000000000, #  1      150000.00000000
-#           28.0000000000, #  2      100000.00000000
-#           14.0000000000, #  3       50000.00000000
-#            7.0000000000, #  4       25000.00000000
-#            4.2000000000, #  5       15000.00000000
-#            2.8000000000, #  6       10000.00000000
-#            1.4000000000, #  7        5000.00000000
-#            0.8400000000, #  8        3000.00000000
-#            0.5600000000, #  9        2000.00000000
-#            0.2800000000, # 10        1000.00000000
-#            0.1400000000, # 11         500.00000000
-#            0.0700000000, # 12         250.00000000
-#    ]
-  #C:\mapproxy\Python312\Scripts\mapproxy-util.exe scales --unit m --dpi 96 --as-res-config  500000 250000 150000 100000 50000 25000 15000 10000 5000 3000 2000 1000 500 250  
-#    res: [
-#         #  res            level     scale @96.0 DPI
-#           66.1458333333, #  0      250000.00000000
-#           39.6875000000, #  1      150000.00000000
-#           26.4583333333, #  2      100000.00000000
-#           13.2291666667, #  3       50000.00000000
-#            6.6145833333, #  4       25000.00000000
-#            3.9687500000, #  5       15000.00000000
-#            2.6458333333, #  6       10000.00000000
-#            1.3229166667, #  7        5000.00000000
-#            0.7937500000, #  8        3000.00000000
-#            0.5291666667, #  9        2000.00000000
-#            0.2645833333, # 10        1000.00000000
-#            0.1322916667, # 11         500.00000000
-#            0.0661458333, # 12         250.00000000
-#    ]
-   
+    #    res: [
+    #         #  res            level     scale @90.7 DPI
+    #           70.0000000000, #  0      250000.00000000
+    #           42.0000000000, #  1      150000.00000000
+    #           28.0000000000, #  2      100000.00000000
+    #           14.0000000000, #  3       50000.00000000
+    #            7.0000000000, #  4       25000.00000000
+    #            4.2000000000, #  5       15000.00000000
+    #            2.8000000000, #  6       10000.00000000
+    #            1.4000000000, #  7        5000.00000000
+    #            0.8400000000, #  8        3000.00000000
+    #            0.5600000000, #  9        2000.00000000
+    #            0.2800000000, # 10        1000.00000000
+    #            0.1400000000, # 11         500.00000000
+    #            0.0700000000, # 12         250.00000000
+    #    ]
+    #C:\mapproxy\Python312\Scripts\mapproxy-util.exe scales --unit m --dpi 96 --as-res-config  500000 250000 150000 100000 50000 25000 15000 10000 5000 3000 2000 1000 500 250  
+    #    res: [
+    #         #  res            level     scale @96.0 DPI
+    #           66.1458333333, #  0      250000.00000000
+    #           39.6875000000, #  1      150000.00000000
+    #           26.4583333333, #  2      100000.00000000
+    #           13.2291666667, #  3       50000.00000000
+    #            6.6145833333, #  4       25000.00000000
+    #            3.9687500000, #  5       15000.00000000
+    #            2.6458333333, #  6       10000.00000000
+    #            1.3229166667, #  7        5000.00000000
+    #            0.7937500000, #  8        3000.00000000
+    #            0.5291666667, #  9        2000.00000000
+    #            0.2645833333, # 10        1000.00000000
+    #            0.1322916667, # 11         500.00000000
+    #            0.0661458333, # 12         250.00000000
+    #    ]
+
     #min_res: 64
     # res_factor: sqrt2
-    
+
+  gisdaten_grid4326:
+    srs: EPSG:4326
+    bbox: [ -180, -90, 180, 90 ]
+    bbox_srs: EPSG:4326
+    origin: 'nw'
+    tile_size: [ 256, 256 ]
+    # Standard Web Mercator resolution levels for EPSG:4326 (geographic coordinates)
+    res: [ 0.703125, 0.3515625, 0.17578125, 0.087890625, 0.0439453125, 0.02197265625, 0.010986328125, 0.0054931640625, 0.00274658203125, 0.001373291015625, 0.0006866455078125, 0.00034332275390625, 0.000171661376953125, 0.0000858306884765625 ]
+
 globals:
   srs:
-    axis_order_en: ['EPSG:21781', 'EPSG:2056']
+    axis_order_en: [ 'EPSG:21781', 'EPSG:2056' ]
     # override system projection file
     #proj_data_dir: '/path to dir that contains epsg file'
 
-  # cache options
+    # cache options
   cache:
     # where to store the cached images
     # base_dir: './cache_data'
@@ -285,11 +292,10 @@ globals:
     tile_lock_dir: d:\
 
     # request x*y tiles in one step
-    meta_size: [4, 4]
+    meta_size: [ 4, 4 ]
     # add a buffer on all sides (in pixel) when requesting
     # new images
     meta_buffer: 80
-
 
   # image/transformation options
   image:
@@ -312,9 +318,9 @@ globals:
         colors: 32
         transparent: true
         encoding_options:
-        # The algorithm used to quantize (reduce) the image colors
+          # The algorithm used to quantize (reduce) the image colors
           quantizer: fastoctree
-        opacity:  0.5
+        opacity: 0.5
       overlay_format:
         format: image/png
         # the custom format will be stored as 8bit PNG
@@ -322,20 +328,11 @@ globals:
         colors: 32
         transparent: true
         encoding_options:
-        # The algorithm used to quantize (reduce) the image colors
+          # The algorithm used to quantize (reduce) the image colors
           quantizer: fastoctree
-        opacity:  0.1
+        opacity: 0.1
       # edit an existing format
       image/jpeg:
         encoding_options:
           # jpeg quality [0-100]
           jpeg_quality: 85
-        
-        
-        
-        
-        
-        
-        
-        
-        
