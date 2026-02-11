@@ -19,3 +19,8 @@ __pycache__/
 
 # Backup-Dateien
 *.yaml.bak
+
+# Große Dateien / Installer
+*.exe
+*.msi
+*.iso
