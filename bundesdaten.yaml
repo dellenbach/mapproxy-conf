@@ -32,7 +32,7 @@ services:
     versions: [ '1.3.0', '1.1.1' ]
 
     # supported SRS for this WMS
-    srs: [ 'EPSG:2056', 'EPSG:4326' ]
+    srs: [ 'EPSG:2056' ]
 
     # force the layer extents (BBOX) to be displayed in this SRS
     bbox_srs: [ 'EPSG:2056' ]
@@ -82,7 +82,7 @@ services:
     versions: [ '1.3.0' ]
 
     # # supported SRS for this WMS
-    srs: [ 'EPSG:2056', 'EPSG:4326' ]
+    srs: [ 'EPSG:2056' ]
 
     # # force the layer extents (BBOX) to be displayed in this SRS
     # bbox_srs: ['EPSG:2056']
@@ -175,12 +175,12 @@ sources:
       version: 1.3.0
       featureinfo: true
       featureinfo_tolerance: 10
-    supported_srs: [ 'EPSG:2056', 'EPSG:4326' ]
+    supported_srs: [ 'EPSG:2056' ]
     coverage: *bboxch
 
 caches:
   ch.swisstopo.swissimage.cache:
-    grids: [ gisdaten_grid2056, gisdaten_grid4326 ]
+    grids: [ gisdaten_grid2056 ]
     # grids: [GLOBAL_WEBMERCATOR]
     sources: [ ch.swisstopo.swissimage ]
     #disable_storage: true
@@ -262,15 +262,6 @@ grids:
 
     #min_res: 64
     # res_factor: sqrt2
-
-  gisdaten_grid4326:
-    srs: EPSG:4326
-    bbox: [ -180, -90, 180, 90 ]
-    bbox_srs: EPSG:4326
-    origin: 'nw'
-    tile_size: [ 256, 256 ]
-    # Standard Web Mercator resolution levels for EPSG:4326 (geographic coordinates)
-    res: [ 0.703125, 0.3515625, 0.17578125, 0.087890625, 0.0439453125, 0.02197265625, 0.010986328125, 0.0054931640625, 0.00274658203125, 0.001373291015625, 0.0006866455078125, 0.00034332275390625, 0.000171661376953125, 0.0000858306884765625 ]
 
 globals:
   srs:
