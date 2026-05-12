@@ -33,7 +33,7 @@ sources:
     http:
       ssl_no_cert_checks: true
     req:
-      layers: 'show:24'
+      layers: 'show:27'
       url: >-
         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/ow_baukoordination/MapServer
       transparent: true

@@ -70,8 +70,8 @@ base:
   - sources\ch.nw.rohrleitungen.yaml                                                
   - sources\ch.nw.ruhezonen-wildtiere.yaml                                                    
   - sources\ch.nw.sanierung-wasserkraft.yaml                                                  
-  #- sources\ch.nw.schutzgebiet-gnappiried.yaml                                                
-  #- sources\ch.nw.schutzgebiet-stansstaderried.yaml                                           
+  - sources\ch.nw.schutzgebiet-gnappiried.yaml                                                
+  - sources\ch.nw.schutzgebiet-stansstaderried.yaml                                           
   - sources\ch.nw.seeuferkonzept-vierwaldstaettersee.yaml                                     
   - sources\ch.nw.seilbahnen-skilifte.yaml                                                    
   - sources\ch.nw.stand-der-erschliessung.yaml                                                

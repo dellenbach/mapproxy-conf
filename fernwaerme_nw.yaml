@@ -1,3 +1,6 @@
+base:
+  - base/globals.yaml
+  - base/grids.yaml
 services:
   demo: null
   wms:
@@ -27,9 +30,11 @@ services:
     featureinfo_types:
       - text
       - xml
+      - json
+      - html
     md:
-      title: WMS EWO
-      abstract: WMS EWO
+      title: WMS NW Wasser
+      abstract: WMS NW Wasser
       online_resource: 'https://www.gis-daten.ch'
       contact:
         organization: GIS Daten AG
@@ -44,33 +49,40 @@ services:
         werden.
 parts:
   coverages:
-    bboxnw: &ref_2
+    bboxnw: &ref_0
       bbox:
         - 2643483
         - 1171738
         - 2702269
         - 1216819
       srs: 'EPSG:2056'
-    bboxow: &ref_3
+    bboxow:
       bbox:
         - 2643483
         - 1171738
         - 2702269
         - 1216819
       srs: 'EPSG:2056'
-    bboxnwow: &ref_1
+    bboxnwow:
       bbox:
         - 2643483
         - 1171738
         - 2702269
         - 1216819
       srs: 'EPSG:2056'
-    bboxlu: &ref_0
+    bboxlu:
       bbox:
         - 2630127
         - 1180568
         - 2681764
         - 1237690
+      srs: 'EPSG:2056'
+    bboxels:
+      bbox:
+        - 2620000
+        - 1146000
+        - 2724800
+        - 1242000
       srs: 'EPSG:2056'
     bboxclip:
       bbox:
@@ -80,57 +92,12 @@ parts:
         - 1200000
       srs: 'EPSG:2056'
 layers:
-  - name: WMS EWO NIS
-    title: WMS EWO NIS
+  - name: WMS NW Fernwärme
+    title: WMS NW Fernwärme
     sources:
-      - ch.ow_basisplan_gis_farbig
-      - ch.ow_basisplan_gis_dynamisch
-      - ch.ow_EWO_NIS
-      - ch.ow_EWO_NIS_Fernwaerme
+      - ch.nw.fernwaerme
 sources:
-  ch.ow_basisplan_gis_farbig:
-    type: arcgis
-    http:
-      ssl_no_cert_checks: true
-    req:
-      url: >-
-        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/ow_basisplan_gis_farbig/MapServer
-      transparent: false
-    opts:
-      featureinfo: true
-      featureinfo_tolerance: 10
-      featureinfo_return_geometries: false
-    supported_srs:
-      - 'EPSG:2056'
-      - 'EPSG:21781'
-      - 'EPSG:4326'
-      - 'EPSG:4258'
-      - 'CRS:84'
-      - 'EPSG:3857'
-      - 'EPSG:900913'
-    coverage: *ref_2
-  ch.ow_basisplan_gis_dynamisch:
-    type: arcgis
-    http:
-      ssl_no_cert_checks: true
-    req:
-      url: >-
-        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_basis/ow_basisplan_gis_dynamisch/MapServer
-      transparent: true
-    opts:
-      featureinfo: true
-      featureinfo_tolerance: 10
-      featureinfo_return_geometries: false
-    supported_srs:
-      - 'EPSG:2056'
-      - 'EPSG:21781'
-      - 'EPSG:4326'
-      - 'EPSG:4258'
-      - 'CRS:84'
-      - 'EPSG:3857'
-      - 'EPSG:900913'
-    coverage: *ref_2
-  ch.ow_EWO_NIS:
+  ch.nw.fernwaerme:
     type: arcgis
     http:
       ssl_no_cert_checks: true
@@ -138,8 +105,9 @@ sources:
       headers:
         X-Esri-Authorization: Bearer YpSel0plMC_ExuACSVAmgip_PTV2khyFzy1TNNjBat-in-uFv7s-YGi46_Hm90jR
     req:
+      layers: 'show: all'
       url: >-
-        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/ewo/EWO_NIS/MapServer
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach_sec/nw_fernwaerme/MapServer
       transparent: true
     opts:
       featureinfo: true
@@ -147,48 +115,14 @@ sources:
       featureinfo_return_geometries: false
     supported_srs:
       - 'EPSG:2056'
-      - 'EPSG:21781'
-      - 'EPSG:4326'
-      - 'EPSG:4258'
-      - 'CRS:84'
       - 'EPSG:3857'
-      - 'EPSG:900913'
-    coverage: *ref_0
-  ch.ow_EWO_NIS_Fernwaerme:
-    type: arcgis
-    http:
-      ssl_no_cert_checks: true
-      client_timeout: 600
-      headers:
-        X-Esri-Authorization: Bearer YpSel0plMC_ExuACSVAmgip_PTV2khyFzy1TNNjBat-in-uFv7s-YGi46_Hm90jR
-    req:
-      layers: 'show:255'
-      url: >-
-        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/ewo/EWO_NIS/MapServer
-      transparent: true
-    opts:
-      featureinfo: true
-      featureinfo_tolerance: 10
-      featureinfo_return_geometries: false
-    supported_srs:
-      - 'EPSG:2056'
-      - 'EPSG:21781'
-      - 'EPSG:4326'
-      - 'EPSG:4258'
-      - 'CRS:84'
-      - 'EPSG:3857'
-      - 'EPSG:900913'
     coverage: *ref_0
 globals:
   srs:
     axis_order_en:
-      - 'EPSG:2056'
       - 'EPSG:21781'
-      - 'EPSG:4326'
-      - 'EPSG:4258'
-      - 'CRS:84'
+      - 'EPSG:2056'
       - 'EPSG:3857'
-      - 'EPSG:900913'
   cache:
     base_dir: ./cache_data
     lock_dir: ./cache_data/locks

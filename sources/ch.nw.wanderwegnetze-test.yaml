@@ -32,7 +32,7 @@ sources:
     http:
       ssl_no_cert_checks: true
     req:
-      layers: 'show:3'
+      layers: 'show:4'
       url: >-
         https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_wanderwege/MapServer
       transparent: true

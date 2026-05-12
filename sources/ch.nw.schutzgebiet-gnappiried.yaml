@@ -23,7 +23,7 @@ parts:
 layers:
   - name: ch.nw.schutzgebiet-gnappiried
     title: Schutzgebiet Gnappiried (NW032)
-    legendurl: https://www.gis-daten.ch/docs/nw/wms/schutzgebiet-gnappiried.png 
+    legendurl: https://www.gis-daten.ch/docs/nw/wms/schutzgebiet-gnappiried-neu.png 
     sources:
       - ch.nw.schutzgebiet-gnappiried
 
@@ -33,9 +33,9 @@ sources:
     http:
       ssl_no_cert_checks: true
     req:
-      layers: 'show:49'
+      layers: 'show all'
       url: >-
-        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_natur_ls_natur_landschaftsschutz/MapServer
+        https://gisdaten-ags-01.gisdaten.local:6443/arcgis/rest/services/gis_fach/nw_natur_ls_gnappiried/MapServer
       transparent: true
     opts:
       featureinfo: true
